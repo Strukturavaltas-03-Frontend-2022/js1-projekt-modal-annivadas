@@ -15,11 +15,27 @@ body {font-family: Arial, Helvetica, sans-serif;}
 }
 
 .modal-content {
+  position: relative;
   background-color: #fefefe;
   margin: auto;
   padding: 20px 40px 20px 20px;
   border: 1px solid #888;
   width: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
 }
 
 .close {
@@ -42,7 +58,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
   bottom: 50px;
 }
 
-.okay {
+.play {
   background-color: green;
   text-align: center;
   margin-bottom: 10rem;
@@ -52,7 +68,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
   color: #fefefe;
 }
 
-.cancel {
+.later {
   background-color: red;
   text-align: center;
   font-size: large;
